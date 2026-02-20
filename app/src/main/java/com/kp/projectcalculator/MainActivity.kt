@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val btn5 = findViewById<Button>(R.id.btn5)
         val btn6 = findViewById<Button>(R.id.btn6)
         val btn7 = findViewById<Button>(R.id.btn7)
+        val btn8 = findViewById<Button>(R.id.btn8)
 
         btn1.setOnClickListener {
             if (tvResult.text.toString() == "0") {
@@ -82,6 +83,13 @@ class MainActivity : AppCompatActivity() {
                 tvResult.text = "7"
             } else {
                 tvResult.append("7")
+            }
+        }
+        btn8.setOnClickListener {
+            if (tvResult.text.toString() == "0") {
+                tvResult.text = "8"
+            } else {
+                tvResult.append("8")
             }
         }
 
