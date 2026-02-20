@@ -1,6 +1,8 @@
 package com.kp.projectcalculator
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +21,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
+        val btn1 = findViewById<Button>(R.id.btn1)
 
+        btn1.setOnClickListener {
+            if (tvResult.text.toString() == "0") {
+                tvResult.text = "1"
+            } else {
+                tvResult.append("1")
+            }
+        }
     }
 }
