@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
         val btn1 = findViewById<Button>(R.id.btn1)
+        val btn2 = findViewById<Button>(R.id.btn2)
 
         btn1.setOnClickListener {
             if (tvResult.text.toString() == "0") {
@@ -30,5 +31,15 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("1")
             }
         }
+
+        btn2.setOnClickListener {
+            if (tvResult.text.toString() == "0") {
+                tvResult.text = "2"
+            } else {
+                tvResult.append("2")
+            }
+        }
+
+
     }
 }
