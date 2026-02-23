@@ -47,12 +47,16 @@ class MainActivity : AppCompatActivity() {
         }
         val btnPlus = findViewById<Button>(R.id.btnPlus)
         val btnMinus = findViewById<Button>(R.id.btnMinus)
+        val btnMultiply = findViewById<Button>(R.id.btnMultiply)
 
         btnPlus.setOnClickListener {
             action = "+"
         }
         btnMinus.setOnClickListener {
             action = "-"
+        }
+        btnMultiply.setOnClickListener {
+            action = "*"
         }
     }
     private fun appendNumber(number: String) {

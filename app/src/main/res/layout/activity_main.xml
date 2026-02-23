@@ -73,6 +73,14 @@
         app:layout_constraintTop_toBottomOf="@+id/btn9"
         android:layout_margin="8dp"/>
     <Button
+        android:id="@+id/btnMultiply"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="×"
+        app:layout_constraintStart_toEndOf="@id/btn6"
+        app:layout_constraintTop_toBottomOf="@id/btnDivide"
+        android:layout_margin="8dp"/>
+    <Button
         android:id="@+id/btn1"
         android:layout_width="90dp"
         android:layout_height="90dp"
