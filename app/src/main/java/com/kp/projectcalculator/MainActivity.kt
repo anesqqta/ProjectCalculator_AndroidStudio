@@ -45,6 +45,11 @@ class MainActivity : AppCompatActivity() {
                 tvResult.text = if (action.isEmpty()) first else second
             }
         }
+        val btnPlus = findViewById<Button>(R.id.btnPlus)
+
+        btnPlus.setOnClickListener {
+            action = "+"
+        }
     }
     private fun appendNumber(number: String) {
         if (action.isEmpty()) {
