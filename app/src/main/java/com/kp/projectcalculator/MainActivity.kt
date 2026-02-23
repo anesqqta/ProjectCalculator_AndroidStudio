@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         val btnMinus = findViewById<Button>(R.id.btnMinus)
         val btnMultiply = findViewById<Button>(R.id.btnMultiply)
         val btnDivide = findViewById<Button>(R.id.btnDivide)
+        val btnEquals = findViewById<Button>(R.id.btnEquals)
 
         btnPlus.setOnClickListener {
             action = "+"
@@ -61,6 +62,21 @@ class MainActivity : AppCompatActivity() {
         }
         btnDivide.setOnClickListener {
             action = "/"
+        }
+        btnEquals.setOnClickListener {
+            val num1 = first.toIntOrNull() ?: 0
+            val num2 = second.toIntOrNull() ?: 0
+            val result = when(action) {
+                "+" -> num1 + num2
+                "-" -> num1 - num2
+                "*" -> num1 * num2
+                "/" -> if (num2 != 0) num1 / num2 else 0
+                else -> 0
+            }
+            tvResult.text = result.toString()
+            first = result.toString()
+            second = ""
+            action = ""
         }
     }
     private fun appendNumber(number: String) {

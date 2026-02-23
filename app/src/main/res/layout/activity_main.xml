@@ -128,7 +128,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn1"
         android:layout_margin="8dp"/>
-
+    <Button
+        android:id="@+id/btnEquals"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="="
+        app:layout_constraintStart_toEndOf="@id/btnClear"
+        app:layout_constraintTop_toBottomOf="@id/btn3"
+        android:layout_margin="8dp"/>
     <Button
         android:id="@+id/btnPlus"
         android:layout_width="90dp"
