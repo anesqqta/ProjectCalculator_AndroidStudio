@@ -46,9 +46,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         val btnPlus = findViewById<Button>(R.id.btnPlus)
+        val btnMinus = findViewById<Button>(R.id.btnMinus)
 
         btnPlus.setOnClickListener {
             action = "+"
+        }
+        btnMinus.setOnClickListener {
+            action = "-"
         }
     }
     private fun appendNumber(number: String) {
