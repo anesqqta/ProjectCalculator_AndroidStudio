@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         val btnPlus = findViewById<Button>(R.id.btnPlus)
         val btnMinus = findViewById<Button>(R.id.btnMinus)
         val btnMultiply = findViewById<Button>(R.id.btnMultiply)
+        val btnDivide = findViewById<Button>(R.id.btnDivide)
 
         btnPlus.setOnClickListener {
             action = "+"
@@ -57,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         }
         btnMultiply.setOnClickListener {
             action = "*"
+        }
+        btnDivide.setOnClickListener {
+            action = "/"
         }
     }
     private fun appendNumber(number: String) {

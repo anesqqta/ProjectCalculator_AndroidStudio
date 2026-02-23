@@ -49,6 +49,14 @@
         app:layout_constraintTop_toBottomOf="@id/tvResult"
         android:layout_margin="8dp"/>
     <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="÷"
+        app:layout_constraintStart_toEndOf="@id/btn9"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        android:layout_margin="8dp"/>
+    <Button
         android:id="@+id/btn4"
         android:layout_width="90dp"
         android:layout_height="90dp"
