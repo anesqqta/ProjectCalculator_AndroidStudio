@@ -10,6 +10,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+    private var first = ""
+    private var second = ""
+    private var action = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,86 +26,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
-        val btn1 = findViewById<Button>(R.id.btn1)
-        val btn2 = findViewById<Button>(R.id.btn2)
-        val btn3 = findViewById<Button>(R.id.btn3)
-        val btn4 = findViewById<Button>(R.id.btn4)
-        val btn5 = findViewById<Button>(R.id.btn5)
-        val btn6 = findViewById<Button>(R.id.btn6)
-        val btn7 = findViewById<Button>(R.id.btn7)
-        val btn8 = findViewById<Button>(R.id.btn8)
-        val btn9 = findViewById<Button>(R.id.btn9)
-        val btn0 = findViewById<Button>(R.id.btn0)
+        val buttons = listOf(
+            findViewById<Button>(R.id.btn0),
+            findViewById<Button>(R.id.btn1),
+            findViewById<Button>(R.id.btn2),
+            findViewById<Button>(R.id.btn3),
+            findViewById<Button>(R.id.btn4),
+            findViewById<Button>(R.id.btn5),
+            findViewById<Button>(R.id.btn6),
+            findViewById<Button>(R.id.btn7),
+            findViewById<Button>(R.id.btn8),
+            findViewById<Button>(R.id.btn9)
+        )
 
-        btn1.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "1"
-            } else {
-                tvResult.append("1")
+        buttons.forEachIndexed { index, button ->
+            button.setOnClickListener {
+                appendNumber(index.toString())
+                tvResult.text = if (action.isEmpty()) first else second
             }
         }
-        btn2.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "2"
-            } else {
-                tvResult.append("2")
-            }
-        }
-        btn3.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "3"
-            } else {
-                tvResult.append("3")
-            }
-        }
-        btn4.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "4"
-            } else {
-                tvResult.append("4")
-            }
-        }
-        btn5.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "5"
-            } else {
-                tvResult.append("5")
-            }
-        }
-        btn6.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "6"
-            } else {
-                tvResult.append("6")
-            }
-        }
-        btn7.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "7"
-            } else {
-                tvResult.append("7")
-            }
-        }
-        btn8.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "8"
-            } else {
-                tvResult.append("8")
-            }
-        }
-        btn9.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "9"
-            } else {
-                tvResult.append("9")
-            }
-        }
-        btn0.setOnClickListener {
-            if (tvResult.text.toString() == "0") {
-                tvResult.text = "0"
-            } else {
-                tvResult.append("0")
-            }
+    }
+    private fun appendNumber(number: String) {
+        if (action.isEmpty()) {
+            first += number
+        } else {
+            second += number
         }
     }
 }
