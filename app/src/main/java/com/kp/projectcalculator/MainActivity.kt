@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("1")
             }
         }
-
         btn2.setOnClickListener {
             if (tvResult.text.toString() == "0") {
                 tvResult.text = "2"
@@ -47,7 +46,6 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("2")
             }
         }
-
         btn3.setOnClickListener {
             if (tvResult.text.toString() == "0") {
                 tvResult.text = "3"
@@ -55,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("3")
             }
         }
-
         btn4.setOnClickListener {
             if (tvResult.text.toString() == "0") {
                 tvResult.text = "4"
@@ -63,7 +60,6 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("4")
             }
         }
-
         btn5.setOnClickListener {
             if (tvResult.text.toString() == "0") {
                 tvResult.text = "5"
@@ -71,7 +67,6 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("5")
             }
         }
-
         btn6.setOnClickListener {
             if (tvResult.text.toString() == "0") {
                 tvResult.text = "6"
@@ -79,7 +74,6 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("6")
             }
         }
-
         btn7.setOnClickListener {
             if (tvResult.text.toString() == "0") {
                 tvResult.text = "7"
@@ -94,7 +88,6 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("8")
             }
         }
-
         btn9.setOnClickListener {
             if (tvResult.text.toString() == "0") {
                 tvResult.text = "9"
@@ -102,7 +95,6 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("9")
             }
         }
-
         btn0.setOnClickListener {
             if (tvResult.text.toString() == "0") {
                 tvResult.text = "0"
@@ -110,11 +102,5 @@ class MainActivity : AppCompatActivity() {
                 tvResult.append("0")
             }
         }
-
-
-
-
-
-
     }
 }
