@@ -129,6 +129,14 @@
         app:layout_constraintTop_toBottomOf="@id/btn1"
         android:layout_margin="8dp"/>
     <Button
+        android:id="@+id/btnClear"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="C"
+        app:layout_constraintStart_toEndOf="@id/btn0"
+        app:layout_constraintTop_toBottomOf="@id/btn2"
+        android:layout_margin="8dp"/>
+    <Button
         android:id="@+id/btnEquals"
         android:layout_width="90dp"
         android:layout_height="90dp"
